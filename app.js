@@ -44,6 +44,18 @@ class LinkedList {//the list resides here
         }
          console.log(index)
     }
+    headNode(){
+        console.log(this.head.data);
+    }
+    tailNode(){
+        let current = this.head;
+        let tail;
+        while(current){
+            tail = current.data;
+            current = current.next;
+        }
+        console.log(tail)
+    }
 
     printList(){
         let current = this.head;
@@ -65,5 +77,7 @@ list1.append("turtle");
 
 list1.printList();
 list1.size();
+list1.headNode();
+list1.tailNode();
 
 

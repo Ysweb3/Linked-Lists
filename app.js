@@ -35,6 +35,15 @@ class LinkedList {//the list resides here
         
         }
     }
+    size(){
+        let current = this.head;//current is the first node of the list
+        let index = 0;
+        while(current){
+           index++;
+           current = current.next;
+        }
+         console.log(index)
+    }
 
     printList(){
         let current = this.head;
@@ -51,9 +60,10 @@ list1.append("dog");
 list1.append("cat");
 list1.prepend("parrot");
 list1.append("hamster");
-// list.append("snake");
-// list.append("turtle");
+list1.append("snake");
+list1.append("turtle");
 
 list1.printList();
+list1.size();
 
 

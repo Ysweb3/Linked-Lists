@@ -45,23 +45,30 @@ class LinkedList {//the list resides here
          console.log(index)
     }
     headNode(){
-        console.log(this.head.data);
+        console.log(this.head.data);//just the first node if printed
     }
     tailNode(){
         let current = this.head;
         let tail;
-        while(current){
+        while(current){//iterates over all the nodes and gets to the last one
             tail = current.data;
             current = current.next;
         }
         console.log(tail)
     }
+    at(index){
+       let current = this.head; 
+       for(let i = 1; i < index; i++){//simple for loop to get the node on the index given
+            current = current.next;
+        }
+         console.log(current.data);
+    }
 
     printList(){
-        let current = this.head;
+        let current = this.head;//the newest node 
         while(current){
             console.log(current.data);
-            current = current.next;
+            current = current.next;//gets to the next node
         }
     }
 }
@@ -79,5 +86,6 @@ list1.printList();
 list1.size();
 list1.headNode();
 list1.tailNode();
+list1.at(2);
 
 

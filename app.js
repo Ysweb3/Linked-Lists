@@ -58,7 +58,7 @@ class LinkedList {//the list resides here
     }
     at(index){
        let current = this.head; //the 1st node 
-       for(let i = 1; i < index; i++){//simple for loop to get the node on the index given
+       for(let i = 0; i < index; i++){//simple for loop to get the node on the index given
             current = current.next;
         }
          console.log(current.data);
@@ -107,7 +107,7 @@ const list1 = new LinkedList();
 
 list1.append("dog");
 list1.append("cat");
-list1.prepend("parrot");
+// list1.prepend("parrot");
 list1.append("hamster");
 list1.append("snake");
 list1.append("turtle");
@@ -116,7 +116,7 @@ list1.append("turtle");
 // list1.size();
 // list1.headNode();
 // list1.tailNode();
-// list1.at(2);
+list1.at(1);
 // list1.pop();
 // console.log(list1.contains("snake"));
 console.log(list1.find("cat"));

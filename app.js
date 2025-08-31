@@ -57,17 +57,26 @@ class LinkedList {//the list resides here
         console.log(tail)
     }
     at(index){
-       let current = this.head; 
+       let current = this.head; //the 1st node 
        for(let i = 1; i < index; i++){//simple for loop to get the node on the index given
             current = current.next;
         }
          console.log(current.data);
     }
+    pop(){
+        let current = this.head;//the 1st node 
+        while(current.next !== this.tail){
+            current = current.next;//gets to the next node
+        }
+        const data = this.tail.data;
+        current.next = null;
+        this.tail = current;
 
+    }
     printList(){
-        let current = this.head;//the newest node 
+        let current = this.head;//the 1st node 
         while(current){
-            console.log(current.data);
+            console.log(current);
             current = current.next;//gets to the next node
         }
     }
@@ -82,10 +91,11 @@ list1.append("hamster");
 list1.append("snake");
 list1.append("turtle");
 
+// list1.printList();
+// list1.size();
+// list1.headNode();
+// list1.tailNode();
+// list1.at(2);
+list1.pop();
 list1.printList();
-list1.size();
-list1.headNode();
-list1.tailNode();
-list1.at(2);
-
 

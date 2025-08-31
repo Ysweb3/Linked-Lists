@@ -71,10 +71,20 @@ class LinkedList {//the list resides here
         const data = this.tail.data;
         current.next = null;
         this.tail = current;
-
+    }
+    contains(value){
+        let current = this.head;//the 1st node
+        while(current){
+            if(current.data == value){
+                return true;
+            }
+            current = current.next;
+        }
+        return false;
+        
     }
     printList(){
-        let current = this.head;//the 1st node 
+        let current = this.head;//the 1st node
         while(current){
             console.log(current);
             current = current.next;//gets to the next node
@@ -96,6 +106,7 @@ list1.append("turtle");
 // list1.headNode();
 // list1.tailNode();
 // list1.at(2);
-list1.pop();
+// list1.pop();
 list1.printList();
+console.log(list1.contains("snake"));
 

@@ -81,7 +81,18 @@ class LinkedList {//the list resides here
             current = current.next;
         }
         return false;
-        
+    }
+    find(value){
+        let current = this.head;//the 1st node
+        let index = 0;
+        while(current){
+            if(current.data == value){
+                return index;
+            }
+            current = current.next;
+            index++;
+        }
+        return null;
     }
     printList(){
         let current = this.head;//the 1st node
@@ -107,6 +118,8 @@ list1.append("turtle");
 // list1.tailNode();
 // list1.at(2);
 // list1.pop();
-list1.printList();
-console.log(list1.contains("snake"));
+// console.log(list1.contains("snake"));
+console.log(list1.find("cat"));
+// list1.printList();
+
 

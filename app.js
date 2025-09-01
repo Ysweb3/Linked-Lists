@@ -94,6 +94,15 @@ class LinkedList {//the list resides here
         }
         return null;
     }
+    toString(){
+        let current = this.head;//the 1st node
+        let data ="";
+        while(current){
+            data += "("+current.data+")" + "->";
+            current = current.next;//gets to the next node
+        }
+        console.log(data)
+    }
     printList(){
         let current = this.head;//the 1st node
         while(current){
@@ -116,10 +125,11 @@ list1.append("turtle");
 // list1.size();
 // list1.headNode();
 // list1.tailNode();
-list1.at(1);
+// list1.at(1);
 // list1.pop();
 // console.log(list1.contains("snake"));
-console.log(list1.find("cat"));
+// console.log(list1.find("cat"));
 // list1.printList();
+console.log(list1.toString());
 
 
